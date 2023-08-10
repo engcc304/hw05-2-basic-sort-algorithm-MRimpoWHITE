@@ -39,32 +39,44 @@ int main()
 
     for (int i; i <= 3; i++)
     {
-
         if (Ip1 > Ip2 || Ip1 > Ip3)
         {
-            printf("%d %d %d", Ip1, Ip2, Ip3);
+            if (Ip2 > Ip3)
+            {
+                printf("%d %d %d", Ip1, Ip2 ,Ip3);
+            }
+            
+            if(Ip3 > Ip2 ){
+                printf("%d %d %d", Ip1, Ip3 ,Ip2);
+            }
+            break;
         }
-
-        else if (Ip2 > Ip1 || Ip2 > Ip3)
+        if (Ip2 > Ip1 || Ip2 > Ip3)
         {
-            printf("%d %d %d", Ip2, Ip1, Ip3);
+            if (Ip1 > Ip3)
+            {
+                printf("%d %d %d", Ip2, Ip1 ,Ip3);
+            }
+            
+            if(Ip3 > Ip1 ){
+                printf("%d %d %d", Ip2, Ip3 ,Ip1);
+            }
+            break;
         }
-
-        else if (Ip3 > Ip1 || Ip3 > Ip2)
+        
+        if (Ip3 > Ip1 && Ip3 > Ip2)
         {
-            printf("%d %d %d", Ip3, Ip2, Ip1);
+            if (Ip2 > Ip1)
+            {
+                printf("%d %d %d", Ip3, Ip2 ,Ip1);
+            }
+            
+            if(Ip1 > Ip2 ){
+                printf("%d %d %d", Ip3, Ip1 ,Ip2);
+            }
+            break;
+        
         }
     }
-
-    // else if (Ip3 > Ip1 || Ip3 > Ip2)
-    // {
-    //     printf("%d %d %d", Ip3, Ip2, Ip1);
-    // }
-
-    // else if (Ip3 > Ip1 || Ip3 > Ip2)
-    // {
-    //     printf("%d %d %d", Ip3, Ip2, Ip1);
-    // }
-
     return 0;
 }
